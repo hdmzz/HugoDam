@@ -103,7 +103,6 @@ i.fas.fa-map-marker-alt{
 .br{
 	border-radius: 0 1rem 1rem 0;
 	background-color: #0065fc;
-	padding: 2,25rem;
 	color: white;
 	cursor: pointer;
 }
@@ -435,7 +434,7 @@ i.fas.fa-chart-line{
 		
 		#longchamp{
 			background-image: url(../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
-			text-align: bottom;
+			
 		}
 		/*====================================================================================================================================================*/
 		footer{
