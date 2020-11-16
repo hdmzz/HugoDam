@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html{
+	font-family: "Raleway", "Sans serif";
+}
+body, .titre_carte, p{
+	margin-top: 0;
+}
+
+#bloc_page{
+	padding: 0rem 2rem ;
+}
+
+#presentation, h3, .titre_carte, p {
+	margin-bottom: 0;
+}
+
+.hebact, .inscription, .logo{
+	padding-top: 30px;
+}
+
+h3, p{
+	color: black;
+}
+
+nav{
+	margin-left: auto;
+}
+
+nav li:hover, nav, #ancres li a:hover, .border_blue a, .inscription, .fas{
+	color: #0065fc;
+}
+
+nav li{
+	width: 50%;
+	border-top: 2px #f2f2f2 solid;
+}
+
+li.border_blue, nav li:hover{
+	border-top: 2px #0065FC solid;
+}
+
+a{
+	color: black;
+	text-decoration: none;
+}
+
+#ancres{
+	margin: 0;
+	margin-right: 1px;
+}
+
+.inscription, #inputrecherche, .br, .titre_filtre{
+	font-weight: bold;
+}
+
+i.fas.fa-map-marker-alt{
+	color: #000;
+}
+
+#backgroundpetiti{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 1.5rem;
+	min-height: 1.5rem;
+	border: solid 1px #d9d9d9;
+	border-radius: 100%;
+}
+/*================================================================>>>>>>>>>couleur etoile */
+.grey-star{
+	color: #f2f2f2;
+}
+
+.menu_haut{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.logo{
+	max-height: 70px;
+	max-width: 100px;
+}
+
+#recherche{
+	margin-top: 20px;
+}
+
+#font_awesome_barrederecherche{
+	background-color: #F2F2F2;
+	padding: 1rem;
+	border-radius: 1rem 0 0 1rem;
+}
+
+.barre_de_recherche{
+	display: flex;
+	width: 26rem;
+	border-top: #f2f2f2 1px solid;
+	border-bottom: #f2f2f2 1px solid;
+	border-radius: 1rem;
+}
+
+.br{
+	border-radius: 0 1rem 1rem 0;
+	background-color: #0065fc;
+	padding: 2,25rem;
+	color: white;
+	cursor: pointer;
+}
+#inputrecherche{
+	border: none;
+	padding-left: 1rem;
+	width: 100%;
+}
+
+.fa-search-white{
+	color: #fff;
+
+}
+
+i.fas.fa-search.fa-search-white{
+	display: none;
+}
+
+#ancres{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	list-style: none;
+	width: 250px;
+}
+
+#recherche ,#filtres_button{
+	max-width: 100%;
+}
+
+#filtres_button{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.font_awesome_nav{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #DEEBFF;
+	border-radius: 100%;
+	height: 2rem;
+	width: 2rem;
+	margin: -3px;
+}
+
+.partie_filtre{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.filtre_titre_principale{
+	display: flex;
+	align-items: center;
+}
+
+/*=====================================≠====≠≠≠≠≠===≠≠≠≠≠≠≠≠≠≠≠≠===≠≠≠≠≠≠≠≠≠≠≠≠≠≠≠===> FILTRES */
+
+.filtres{ 
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	list-style: none;
+	border: 1.5px #d2d2d2 solid;
+	border-radius: 2rem;
+	cursor: pointer;
+	color: black;
+	max-width: 60%;
+	height: 2rem;
+	margin: 1rem;
+}
+
+.titre_filtre {
+	margin: 0 1rem;
+}
+
+.info{
+	display: flex;
+	align-items: center;
+	margin-bottom: 25px;
+}
+
+.font_awesome_info {
+	margin-right: 1rem;
+}
+
+.fas{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+}
+
+/*================================================================>BLOC CONTENEUR DU LA PARTIE BLOC HEBERGEMENT ET ASIDE POPULAIRE*/
+#testaside{
+	display: flex;
+	flex-direction: row-reverse;
+}
+/*===================================================================================*/
+/*aside en entier contenant le titre et le block de cartes*/
+
+aside{ 
+	border-radius: 20px;
+	background-color: #F2F2F2;
+	padding: 2vw;
+	width: 45%;
+}
+
+#populaire_titre{
+	display: flex;
+	justify-content: space-between;
+}
+
+i.fas.fa-chart-line{
+	color: #000;
+}
+
+
+/*==================================image classe populaire.=======================*/
+
+/*===========> dimension du conteneur de la div avec le background*/
+.conteneur_image_pop{
+	margin-right: 1rem;
+}
+
+.ratings_pop{
+	margin-top: 25px;
+	font-size: 80%;
+}
+/*===================> div contenant le background de chaque cartes*/
+	.populaire{
+		width: 150px;
+		height: 100%;	
+		border-radius: 1rem 1rem 1rem 1rem;
+		background-size:cover; 
+		background-position: center;
+	}
+/*==================================*/
+
+	/*=========================================fin image pop ============================*/
+	/*classe de chque carte contenant les differnentes locations dan sle aside*/
+	.popular, #hebergements, .hebergementcarte{
+		border-radius: 20px;
+	}
+	.popular{
+		border: 2px white solid;
+		background-color: #FFF;
+		margin-top: 10%;
+		padding: 2px;
+	}
+
+	/*==========================================≠≠≠≠≠≠≠>MISE EN PLACE DES ELEMENT DU ASIDE EN LARGE*/
+	
+	.aside_prio{
+		display: flex;
+		min-height: 120px;
+	}
+	
+	/*==============================================================>background de chaque chambre<========================================+++==*/
+	#soleilmatin{
+		background-image: url(../images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg);
+	}
+	
+	#eauchbr{
+		background-image: url(../images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg);
+	}
+	
+	#bleublanc{
+		background-image: url(../images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg);
+	}
+	/*=============================================================================================================================================*/
+	/* ==========================>bLOC HEBERGEMENT EN ENTIER<==============================*/
+		#hebergements{
+			background-color: #F2F2F2;
+			width: 97%;
+			margin-right: 2vw;
+			padding: 2vw;
+		}
+
+	/*============================================================================*/
+	/*ensemble des cartes hebergements===> conteneur des cartes hebergement*/
+		#div_hebergement{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	/*=======================================*/
+	/*===========================================================carte entiere avec image plus contenue*/
+	.hebergementcarte{
+		border: 2px white solid;
+		background-color: #FFF;
+		margin-top: 20px;
+		padding: 2px;
+		min-width: 28%;
+	}
+	/*===========================> dimensions conteneur de la div avec le background=================================*/
+	.contneur_image_hebergement, .hebergements{
+		width: 100%;
+	}
+	.contneur_image_hebergement{
+		height: 60%;
+	}
+	/*div contenant le background*/
+	.hebergements{	
+		height: 100%;	
+		min-height: 75px;
+		border-radius: 1rem 1rem 0 0;
+		margin-bottom: 2rem;
+		background-position: center;
+		background-size: cover;
+	}
+	/*=================================================> fin des images de hebergement*/
+		.commentaire_carte{
+			margin-top: 5px;
+			margin-bottom: 5px;
+		}
+
+		.ratings{
+			font-size: 80%
+		}
+
+		.afficher_plus{
+			margin-top: 2rem;
+			font-size: 125%;
+			font-weight: 700
+		}
+
+
+
+
+	/*============================================================>background image des cartes<========================================================== */
+		#canne{
+			background-image: url(../images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg);
+		}
+		
+		#hotelmer{
+			background-image: url(../images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg);
+		}
+		
+		#hotport{
+			background-image: url(../images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg);
+		}
+		
+		#auberge1{
+			background-image: url(../images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg);
+		}
+		
+		#mouet{
+			background-image: url(../images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg);
+		}
+		
+		#ami{
+			background-image: url(../images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg);
+		}
+	/*==============================================================================================================================================*/	
+
+	/*changement d'apparence quand on passe sur les filtres*/
+	.filtres:hover{
+			color: #0065fc;
+		}
+	/*========================================================*/
+		/*============================================================PARTIE ACTIVITÉES===================*/
+		#acti_titre{
+			float: left;
+		}
+		
+		#activités{
+			margin-top: 50px;
+		}
+		
+		.acti_description{
+			margin-bottom: 1rem;
+			margin-top: 0.5rem;
+		}
+
+		.cart_acti{
+			border-radius: 20px;
+			margin-bottom: 20px;
+			box-shadow: 0 0 10px #000000a8;
+			background-color: #fff;
+		}
+		
+		.activites{
+			background-size: cover;
+			background-position: center;
+			border-radius: 20px 20px 0 0;
+			margin-bottom: 2rem;
+			min-height: 130px;
+			margin-bottom: 0vw;
+		}
+		
+		/*ensemble ds cartes d'activitées*/
+		#annonce_acti{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: 20px;
+		}
+		
+		.contenue_activites{
+			margin-left: 1rem;
+		}
+		
+		#carte_acti_vp ,#carte_acti_calanques{
+			grid-row: span 2;
+		}
+		/*==============================================================background image des activitées====================================================*/
+		#vieux_port{
+			background-image: url(../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
+			height: 80%
+		}
+		
+		#pomegues{
+			background-image: url(../images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg);
+		}
+		
+		#fioul{
+			background-image: url(../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
+			grid-row: span 2;
+		}
+		
+		#calanques{
+			background-image: url(../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
+			height: 80%
+		}
+		
+		#lagarde{
+			background-image: url(../images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg);
+		}
+		
+		#longchamp{
+			background-image: url(../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
+			text-align: bottom;
+		}
+		/*====================================================================================================================================================*/
+		footer{
+			display: flex;
+			justify-content: space-around;
+			background-color: #F2F2F2;
+		}
+		
+		.footer_colonne{
+			list-style: none;
+			width: 30%;
+			cursor: pointer;
+		}
+		
+		.footer_colonne li, .footer_colonne{
+			margin-bottom: 10px;
+		}
+		/*======================================================RESPONSIVE DESIGN==================================================*/
+		@media screen and (max-width: 1284px) and (min-width: 600px){
+
+			.populaire{
+				
+			}
+
+			#div_hebergement{
+				justify-content: space-around;
+			}
+
+			.hebergementcarte{
+				width: 40%;
+			}
+		}
+		@media screen and (max-width: 1244px){
+			.titre_carte, p {
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow: hidden;
+			}
+
+			.titre_carte{
+				margin-top: 5px;
+			}
+		}
+		@media screen and (max-width: 600px){
+			#bloc_page{
+				padding: ;
+			}
+			.logo{
+				padding-top: 10px;
+			}
+			nav{
+				display: flex;
+				order: 3;
+			}
+
+			/*bordure bleu au dessous des ancres version mobile*/
+			nav li {
+				width: 50%;
+				border-bottom: 2px #f2f2f2 solid;
+				border-top: 0;
+			}
+
+			li.border_blue, nav li:hover{
+				border-bottom: 2px #0065FC solid;
+				border-top: 0;
+			}
+			
+			li.hebact{
+				padding-top: 30px;
+				padding-bottom: 15px;
+			}
+			.inscription, i.fas.fa-search.fa-search-white{
+				display: block;
+			}
+
+			.br{
+				width: 20%;
+			}
+
+			.bouton_rch_nom{
+				display: none;
+			}
+
+			#ancres{
+				padding: 0;
+			}
+			#titre{
+				text-align: center;
+			}
+
+			#filtres_button{
+				justify-content: space-around;
+				padding-left: 0;
+			}
+			aside, nav, .barre_de_recherche, #ancres, #hebergements{
+				width: 100%;
+			}
+
+			#testaside{
+				display: flex;
+				flex-direction: column;
+			}
+
+			aside{
+				border-radius: 0;
+			}
+
+			.aside_prio{
+				flex-direction: column;
+			}
+
+			.conteneur_image_pop, .populaire{
+				height: 150px;
+				width: 100%;
+			}
+
+
+			.lespop{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+
+			.popular{
+				width: 90%;
+			}
+
+			#hebergements{
+				background-color: #fff;
+				border: 0;
+			}
+
+			.hebergements{
+				border-radius: 1rem 1rem 1rem 1rem;
+				height: 150px;
+				margin-bottom: 10px;
+			}
+
+			.hebergementcarte{
+				box-shadow: 0 0 10px #000000a8;
+			}
+
+			.contneur_image_hebergement{
+				margin-right: 1rem;
+			}
+
+			#div_hebergement{
+				display: flex;
+				flex-direction: column;
+			}
+
+			#annonce_acti{
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-column-gap: 20px;
+			}
+			#vieux_port, #calanques{
+				height: auto;
+			}
+
+			/*MARGIN DES TITRE DES CARTES DE LA GRILLE EN SPAN2*/
+			.description_spe{
+				margin-top: 0.5rem;
+				margin-bottom: 1rem;
+			}
+			footer{
+				flex-direction: column;
+			}
+			.footer_colonne, .hebergementcarte{
+				width: auto;
+			}
+
+		}
+							/*	TABLETTE  */	
+		@media screen and (max-width: 870px) and (min-width: 600px) {
+			.filtre_titre_principale{
+		margin-bottom: 0;
+			}
+
+
+			nav:hover{
+				color: blue;
+			}
+
+			#filtres_button{
+				padding-left: 0;
+
+			}
+
+			.filtres{
+				margin: 5px;
+			}
+
+			/*=================bloc hebergement et populaire	*/
+			#testaside, .aside_prio{
+				display: block;
+			}
+			aside, .conteneur_image_pop, .populaire{
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.lespop{
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.popular{
+				margin-top: 0;
+				width: 30%;
+
+			}
+
+			.conteneur_image_pop{
+				height: 100px;
+			}
+
+			.ratings_pop{
+				margin-top: 5px;
+			}
+
+			/*--------------------------pa&rtie hébergemnt 2 colonne de cartes et pas de fond---------------------------------------------*/
+			#hebergements{
+				background-color: #fff;
+			}
+			.hebergementcarte{
+				width: 45%;
+				box-shadow: 0 0 10px #000000a8;
+			}
+
+			.titre_carte {
+				white-space: normal;
+			}
+
+			/*--------------------------------Bloc activité 2colonnes----------------*/
+			#annonce_acti{
+				grid-template-columns: 1fr 1fr;
+			}
+
+			#vieux_port, #calanques{
+				height: auto;
+			}
+
+			.description_spe{
+				margin-top: 0.5rem;
+			}
+
+		}	
+
+		@media screen and (max-width: 419px){
+			#bloc_page{
+				font-size: 13px;
+			}
+		}
+
+		@media screen and (max-width: 360px){
+
+			#bloc_page{
+				font-size: 12px;
+			}
+			
+		}
+
+
+
+
+
+
+
+
+
