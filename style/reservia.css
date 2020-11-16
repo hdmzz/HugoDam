@@ -210,7 +210,6 @@ aside{
 	border-radius: 20px;
 	background-color: #F2F2F2;
 	padding: 2vw;
-	width: 45%;
 }
 
 #populaire_titre{
@@ -457,8 +456,8 @@ i.fas.fa-chart-line{
 		/*======================================================RESPONSIVE DESIGN==================================================*/
 		@media screen and (max-width: 1284px) and (min-width: 600px){
 
-			.populaire{
-				
+			#testaside{
+				align-items: flex-start;
 			}
 
 			#div_hebergement{
@@ -471,7 +470,7 @@ i.fas.fa-chart-line{
 		}
 		@media screen and (max-width: 1244px){
 			.titre_carte, p {
-				white-space: nowrap;
+				
 				text-overflow: ellipsis;
 				overflow: hidden;
 			}
@@ -479,10 +478,30 @@ i.fas.fa-chart-line{
 			.titre_carte{
 				margin-top: 5px;
 			}
+
+			.aside_prio{
+				
+			}
+			.conteneur_image_pop{
+				height: 150px;
+				width: 150px;
+			}
+
+			.populaire{
+				width: inherit;
+			}
+
+			.popular{
+				padding: 1px;
+			}
+
+			.ratings_pop{
+				margin-top: 0;
+			}
 		}
 		@media screen and (max-width: 600px){
 			#bloc_page{
-				padding: ;
+				
 			}
 			.logo{
 				padding-top: 10px;
