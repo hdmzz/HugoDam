@@ -105,6 +105,7 @@ i.fas.fa-map-marker-alt{
 	background-color: #0065fc;
 	color: white;
 	cursor: pointer;
+	border: none;
 }
 #inputrecherche{
 	border: none;
@@ -236,7 +237,7 @@ i.fas.fa-chart-line{
 	.populaire{
 		width: 150px;
 		height: 100%;	
-		border-radius: 1rem 1rem 1rem 1rem;
+		border-radius: 1rem 0rem 0rem 1rem;
 		background-size:cover; 
 		background-position: center;
 	}
@@ -251,7 +252,7 @@ i.fas.fa-chart-line{
 		border: 2px white solid;
 		background-color: #FFF;
 		margin-top: 10%;
-		padding: 2px;
+		padding: 5px;
 	}
 
 	/*==========================================≠≠≠≠≠≠≠>MISE EN PLACE DES ELEMENT DU ASIDE EN LARGE*/
@@ -295,7 +296,7 @@ i.fas.fa-chart-line{
 		border: 2px white solid;
 		background-color: #FFF;
 		margin-top: 20px;
-		padding: 2px;
+		padding: 5px;
 		min-width: 28%;
 	}
 	/*===========================> dimensions conteneur de la div avec le background=================================*/
@@ -453,7 +454,7 @@ i.fas.fa-chart-line{
 			margin-bottom: 10px;
 		}
 		/*======================================================RESPONSIVE DESIGN==================================================*/
-		@media screen and (max-width: 1284px) and (min-width: 600px){
+		@media screen and (max-width: 1284px){
 
 			#testaside{
 				align-items: flex-start;
@@ -488,10 +489,6 @@ i.fas.fa-chart-line{
 
 			.populaire{
 				width: inherit;
-			}
-
-			.popular{
-				padding: 1px;
 			}
 
 			.ratings_pop{
@@ -582,6 +579,10 @@ i.fas.fa-chart-line{
 				width: 90%;
 			}
 
+			.populaire{
+				border-radius: 1rem;
+			}
+
 			#hebergements{
 				background-color: #fff;
 				border: 0;
@@ -665,7 +666,10 @@ i.fas.fa-chart-line{
 			.popular{
 				margin-top: 0;
 				width: 30%;
+			}
 
+			.populaire{
+				border-radius: 1rem;
 			}
 
 			.conteneur_image_pop{
