@@ -495,7 +495,86 @@ i.fas.fa-chart-line{
 				margin-top: 0;
 			}
 		}
-		@media screen and (max-width: 600px){
+
+											/*	TABLETTE  */
+		@media screen and (max-width: 870px) and (min-width: 600px) {
+			.filtre_titre_principale{
+		margin-bottom: 0;
+			}
+
+
+			nav:hover{
+				color: blue;
+			}
+
+			#filtres_button{
+				padding-left: 0;
+
+			}
+
+			.filtres{
+				margin: 5px;
+			}
+
+			/*=================bloc hebergement et populaire	*/
+			#testaside, .aside_prio{
+				display: block;
+			}
+			aside, .conteneur_image_pop, .populaire{
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.lespop{
+				display: flex;
+				justify-content: space-around;
+			}
+
+			.popular{
+				margin-top: 0;
+				width: 30%;
+			}
+
+			.populaire{
+				border-radius: 1rem;
+			}
+
+			.conteneur_image_pop{
+				height: 100px;
+			}
+
+			.ratings_pop{
+				margin-top: 5px;
+			}
+
+			/*--------------------------pa&rtie hébergemnt 2 colonne de cartes et pas de fond---------------------------------------------*/
+			#hebergements{
+				background-color: #fff;
+			}
+			.hebergementcarte{
+				width: 45%;
+				box-shadow: 0 0 10px #000000a8;
+			}
+
+			.titre_carte {
+				white-space: normal;
+			}
+
+			/*--------------------------------Bloc activité 2colonnes----------------*/
+			#annonce_acti{
+				grid-template-columns: 1fr 1fr;
+			}
+
+			#vieux_port, #calanques{
+				height: auto;
+			}
+
+			.description_spe{
+				margin-top: 0.5rem;
+			}
+
+		}	
+		@media screen and (max-width: 601px)/* supprime la zone morte entre 601px et 599px */{
 			#bloc_page{
 				
 			}
@@ -626,84 +705,6 @@ i.fas.fa-chart-line{
 			}
 			.footer_colonne, .hebergementcarte{
 				width: auto;
-			}
-
-		}
-							/*	TABLETTE  */	
-		@media screen and (max-width: 870px) and (min-width: 600px) {
-			.filtre_titre_principale{
-		margin-bottom: 0;
-			}
-
-
-			nav:hover{
-				color: blue;
-			}
-
-			#filtres_button{
-				padding-left: 0;
-
-			}
-
-			.filtres{
-				margin: 5px;
-			}
-
-			/*=================bloc hebergement et populaire	*/
-			#testaside, .aside_prio{
-				display: block;
-			}
-			aside, .conteneur_image_pop, .populaire{
-				width: 100%;
-				margin-bottom: 10px;
-			}
-
-			.lespop{
-				display: flex;
-				justify-content: space-around;
-			}
-
-			.popular{
-				margin-top: 0;
-				width: 30%;
-			}
-
-			.populaire{
-				border-radius: 1rem;
-			}
-
-			.conteneur_image_pop{
-				height: 100px;
-			}
-
-			.ratings_pop{
-				margin-top: 5px;
-			}
-
-			/*--------------------------pa&rtie hébergemnt 2 colonne de cartes et pas de fond---------------------------------------------*/
-			#hebergements{
-				background-color: #fff;
-			}
-			.hebergementcarte{
-				width: 45%;
-				box-shadow: 0 0 10px #000000a8;
-			}
-
-			.titre_carte {
-				white-space: normal;
-			}
-
-			/*--------------------------------Bloc activité 2colonnes----------------*/
-			#annonce_acti{
-				grid-template-columns: 1fr 1fr;
-			}
-
-			#vieux_port, #calanques{
-				height: auto;
-			}
-
-			.description_spe{
-				margin-top: 0.5rem;
 			}
 
 		}	
