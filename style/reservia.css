@@ -26,7 +26,7 @@ nav{
 	margin-left: auto;
 }
 
-nav li:hover, nav, #ancres li a:hover, .border_blue a, .inscription, .fas{
+nav li:hover, nav, #ancres li a:hover, .border_blue a:hover, .inscription, .fas{
 	color: #0065fc;
 }
 
@@ -35,7 +35,7 @@ nav li{
 	border-top: 2px #f2f2f2 solid;
 }
 
-li.border_blue, nav li:hover{
+li.border_blue:hover, nav li:hover{
 	border-top: 2px #0065FC solid;
 }
 
@@ -48,6 +48,12 @@ a{
 	margin: 0;
 	margin-right: 1px;
 }
+
+.ancre_li_a, .hebact{
+	width: 100%;
+}
+
+
 
 .inscription, #inputrecherche, .br, .titre_filtre{
 	font-weight: bold;
@@ -215,6 +221,7 @@ aside{
 #populaire_titre{
 	display: flex;
 	justify-content: space-between;
+	margin-bottom: 0;
 }
 
 i.fas.fa-chart-line{
@@ -251,7 +258,7 @@ i.fas.fa-chart-line{
 	.popular{
 		border: 2px white solid;
 		background-color: #FFF;
-		margin-top: 10%;
+		margin-top: 5%;
 		padding: 5px;
 	}
 
@@ -278,11 +285,14 @@ i.fas.fa-chart-line{
 	/* ==========================>bLOC HEBERGEMENT EN ENTIER<==============================*/
 		#hebergements{
 			background-color: #F2F2F2;
-			width: 97%;
+			width: 100%;
 			margin-right: 2vw;
 			padding: 2vw;
 		}
 
+		#titre_hebergement{
+			margin-bottom: 0;
+		}
 	/*============================================================================*/
 	/*ensemble des cartes hebergements===> conteneur des cartes hebergement*/
 		#div_hebergement{
@@ -381,7 +391,7 @@ i.fas.fa-chart-line{
 
 		.cart_acti{
 			border-radius: 20px;
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 			box-shadow: 0 0 10px #000000a8;
 			background-color: #fff;
 		}
@@ -393,26 +403,74 @@ i.fas.fa-chart-line{
 			margin-bottom: 2rem;
 			min-height: 130px;
 			margin-bottom: 0;
+			height: auto;
 		}
 		
 		/*ensemble ds cartes d'activitées*/
-		#annonce_acti{
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr;
-			grid-column-gap: 20px;
+		#titreGrille{
+			grid-column: 1/-1;
 		}
 		
 		.contenue_activites{
 			margin-left: 1rem;
 		}
+		@media (min-width: 870px){
 		
-		#carte_acti_vp ,#carte_acti_calanques{
-			grid-row: span 2;
+		#annonce_acti{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: 30px;
+			grid-template-rows: auto 220px 30px 30px 30px 220px;
+			margin-bottom: 40px;
 		}
+		
+		
+			
+		#carte_acti_pomegues{
+			grid-column: 2/3;
+			grid-row: 2/5
+		}
+		
+		#carte_acti_vp{
+			grid-row: 2/7;
+			grid-column: 1/1;
+		}
+		
+		#carte_acti_calanques{
+			grid-column: 3/4;
+			grid-row: 2/7;
+		}
+
+		#carte_acti_frioul{
+			grid-column: 2/3;
+			grid-row: 6/7;
+		}
+
+		#carte_acti_lagarde{
+			grid-column: 4/5;
+			grid-row: 2/3;
+		}
+		#carte_acti_longchamp{
+			grid-column: 4/5;
+			grid-row: 4/7;
+		}
+
+		#vieux_port, #calanques{
+			height: 90%;
+		}
+		
+		#pomegues, #longchamp{
+			height: 80%;
+		}
+		
+		#fioul, #lagarde{
+			height: 75%;
+		}
+	}
+
 		/*==============================================================background image des activitées====================================================*/
 		#vieux_port{
 			background-image: url(../images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg);
-			height: 80%
 		}
 		
 		#pomegues{
@@ -421,12 +479,10 @@ i.fas.fa-chart-line{
 		
 		#fioul{
 			background-image: url(../images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg);
-			grid-row: span 2;
 		}
 		
 		#calanques{
 			background-image: url(../images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg);
-			height: 80%
 		}
 		
 		#lagarde{
@@ -435,7 +491,6 @@ i.fas.fa-chart-line{
 		
 		#longchamp{
 			background-image: url(../images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg);
-			
 		}
 		/*====================================================================================================================================================*/
 		footer{
@@ -479,9 +534,6 @@ i.fas.fa-chart-line{
 				margin-top: 5px;
 			}
 
-			.aside_prio{
-				
-			}
 			.conteneur_image_pop{
 				height: 150px;
 				width: 150px;
@@ -562,22 +614,20 @@ i.fas.fa-chart-line{
 
 			/*--------------------------------Bloc activité 2colonnes----------------*/
 			#annonce_acti{
+				display: grid;
+				row-gap: 30px;
 				grid-template-columns: 1fr 1fr;
+				grid-template-rows: auto 190px 190px 190px;
+				column-gap: 30px;
 			}
 
-			#vieux_port, #calanques{
+			.activites{
 				height: auto;
-			}
-
-			.description_spe{
-				margin-top: 0.5rem;
 			}
 
 		}	
 		@media screen and (max-width: 601px)/* supprime la zone morte entre 601px et 599px */{
-			#bloc_page{
-				
-			}
+			
 			
 			nav{
 				display: flex;
@@ -591,7 +641,7 @@ i.fas.fa-chart-line{
 				border-top: 0;
 			}
 
-			li.border_blue, nav li:hover{
+			li.border_blue:hover, nav li:hover{
 				border-bottom: 2px #0065FC solid;
 				border-top: 0;
 			}
