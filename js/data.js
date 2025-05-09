@@ -1,112 +1,151 @@
-// Données des hébergements et activités
+// Données pour le portfolio de développeur
 
-// Données pour la section "Les plus populaires"
-const popularHotels = [
+// Données pour les compétences principales
+const mainSkills = [
     {
-        id: "soleilmatin",
-        name: "Hôtel le soleil du matin",
-        price: "Nuit à partir de 55€",
+        id: "frontend",
+        name: "Développement Frontend",
+        description: "Expertise en HTML5, CSS3 et JavaScript",
         stars: 5,
-        image: "emile-guillemot-Bj_rcSC5XfE-unsplash.jpg"
+        image: "reactanguvue.png"
     },
     {
-        id: "eauchbr",
-        name: "Au coeur de l'eau Chambres d'hôtes",
-        price: "Nuit à partir de 71€",
-        stars: 4,
-        image: "aw-creative-VGs8z60yT2c-unsplash.jpg"
+        id: "backend",
+        name: "Développement Backend",
+        description: "Node.js, Express et bases de données",
+        stars: 5,
+        image: "node-js.svg"
     },
     {
-        id: "bleublanc",
-        name: "Hôtel Tout Bleu et Blanc",
-        price: "Nuit à partir de 68€",
+        id: "C / C++",
+        name: "Developpement C / C++",
+        description: "OpenGL, Multi-threading, gestion de la memoire, réseau",
+        stars: 5,
+        image: "ISO_C++_Logo.jpg"
+    },
+    {
+        id: "docker",
+        name: "Docker",
+        description: "Orchestration de conteneurs docker",
         stars: 4,
-        image: "febrian-zakaria-sjvU0THccQA-unsplash.jpg"
+        image: "docker.svg"
+    },
+    {
+        id: "Python",
+        name: "Python",
+        description: "Tensorflow, OpenCV, Django FastApi",
+        stars: 3,
+        image: "python.png"
+    },
+    {
+        id: "powershell",
+        name: "Powershell",
+        description: "Windows Powershell",
+        stars: 4,
+        image: "powershell.svg"
+    },
+    {
+        id: "bash",
+        name: "Bash",
+        description: "Script Bash",
+        stars: 4,
+        image: "bash.svg"
+    },
+];
+
+// Données pour les projets récents
+const recentProjects = [
+    {
+        id: "SunnyCi",
+        name: "SunnyCi",
+        description: "Localiser une terrasse au soleil !",
+        image: "Sunnycimapbox.png",
+        url: "https://hugodam.cloud/SunnyCi/"
+    },
+    {
+        id: "ign",
+        name: "Visualisation 3D",
+        description: "Interface de visualisation de données géographiques",
+        image: "sunnyciign.png"
+    },
+    {
+        id: "toralizer",
+        name: "Toralizer",
+        description: "Une commande permettant de faire passer n’importe quelle commande Linux par le réseau TOR.",
+        image: "Tor-logo-2011-flat.svg.png",
+        gitUrl: "https://github.com/hdmzz/toralizer.git"
+    },
+    {
+        id: "honey",
+        name: "Honey Pot",
+        description: "Honey Pot ecrit en python WIP",
+        image: "honey.png",
+        gitUrl: "https://github.com/hdmzz/honeypot.git"
+    },
+    {
+        id: "ray",
+        name: "Raytracer C++",
+        description: "Un simple raytracer ecrit en C++",
+        image: "raytracer.jpg",
+        gitUrl: "https://github.com/hdmzz/raytracer.git"
+    },
+    {
+        id: "Réseaux de neurones",
+        name: "Réseaux de neurones",
+        description: "Réseaux de neurones en C",
+        image: "nn_sbg.jpeg"
+        
     }
 ];
 
-// Données pour la section "Hébergements à Marseille"
-const accommodations = [
-    {
-        id: "canne",
-        name: "Auberge la Cannebière",
-        price: "Nuit à partir de 25€",
-        stars: 4,
-        image: "marcus-loke-WQJvWU_HZFo-unsplash.jpg"
-    },
-    {
-        id: "hotport",
-        name: "Hôtel du port",
-        price: "Nuit à partir de 30€",
-        stars: 5,
-        image: "fred-kleber-gTbaxaVLvsg-unsplash.jpg"
-    },
-    {
-        id: "mouet",
-        name: "Hôtel les mouettes",
-        price: "Nuit à partir de 55€",
-        stars: 4,
-        image: "reisetopia-B8WIgxA_PFU-unsplash.jpg"
-    },
-    {
-        id: "hotelmer",
-        name: "Hôtel de la mer",
-        price: "Nuit à partir de 40€",
-        stars: 3,
-        image: "annie-spratt-Eg1qcIitAuA-unsplash.jpg"
-    },
-    {
-        id: "auberge1",
-        name: "Auberge le panier",
-        price: "Nuit à partir de 25€",
-        stars: 3,
-        image: "nicate-lee-kT-ZyaiwBe0-unsplash.jpg"
-    },
-    {
-        id: "ami",
-        name: "Hôtel chez Amina",
-        price: "Nuit à partir de 60€",
-        stars: 5,
-        image: "febrian-zakaria-M6S1WvfW68A-unsplash.jpg"
-    }
-];
-
-// Données pour la section "Activités à Marseille"
-const activities = [
+// Données pour les projets en vitrine (pour le carrousel)
+const showcaseProjects = [
     {
         id: "vieux_port",
-        name: "Vieux port",
+        name: "Site Vitrine E-commerce",
         image: "reno-laithienne-QUgJhdY5Fyk-unsplash.jpg",
+        description: "Boutique en ligne avec paiement intégré",
+        technologies: "React, Node.js, MongoDB",
         gridId: "carte_acti_vp"
     },
     {
         id: "pomegues",
-        name: "Fort de Pomègues",
+        name: "Application de Gestion",
         image: "paul-hermann-QFTrLdQIRhI-unsplash.jpg",
+        description: "Logiciel de gestion d'inventaire",
+        technologies: "Vue.js, Express, PostgreSQL",
         gridId: "carte_acti_pomegues"
     },
     {
         id: "fioul",
-        name: "Îles du Frioul",
+        name: "Progressive Web App",
         image: "kevin-hikari-rV_Qd1l-VXg-unsplash.jpg",
+        description: "Application web avec fonctionnalités offline",
+        technologies: "React, Redux, Firebase",
         gridId: "carte_acti_frioul"
     },
     {
         id: "calanques",
-        name: "Parc national des calanques",
+        name: "Dashboard Analytique",
         image: "kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg",
+        description: "Interface d'analyse de données avec graphiques",
+        technologies: "Angular, D3.js, Node.js",
         gridId: "carte_acti_calanques"
     },
     {
         id: "lagarde",
-        name: "Notre-Dame-De-La-Garde",
+        name: "API RESTful",
         image: "florian-wehde-xW9e8gdotxI-unsplash.jpg",
+        description: "Backend sécurisé avec authentification JWT",
+        technologies: "Express, MongoDB, Passport.js",
         gridId: "carte_acti_lagarde"
     },
     {
         id: "longchamp",
-        name: "Parc Longchamp",
+        name: "Application Mobile",
         image: "lena-paulin-wH2-EJoDcV0-unsplash.jpg",
+        description: "App cross-platform pour iOS et Android",
+        technologies: "React Native, Redux, Firebase",
         gridId: "carte_acti_longchamp"
     }
 ];

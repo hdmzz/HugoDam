@@ -6,56 +6,97 @@
 	<link rel="stylesheet" type="text/css" href="style/reservia.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
 	<script src="https://kit.fontawesome.com/96d3fd8f4a.js" crossorigin="anonymous"></script>
-	<title>Reservia</title>
+	<title>HugoDam</title>
 </head>
 <body>
 	<div id="bloc_page">
 		<header>
 			<div class="menu_haut">
 				<div id="logo">
-					<h1><img class="logo" src="images/logo/Reservia@3x.png" alt="logo reservia"/></h1>
+					<h1 class="name-title">Hugo Damitzian</h1>
 				</div>
 				<nav>
 					<ul id="ancres">
-						<a href="#hebergements" class="ancre_li_a"><li class="hebact border_blue">Hébergements</li></a>
-						<a href="#activites_bloc" class="ancre_li_a"><li class="hebact">Activités</li></a>
+						<a href="#competences" class="ancre_li_a"><li class="hebact border_blue">Compétences</li></a>
+						<a href="#projets" class="ancre_li_a"><li class="hebact">Projets</li></a>
+						<a href="#projets_vitrine" class="ancre_li_a"><li class="hebact">Portfolio</li></a>
+						<a href="#contact" class="ancre_li_a"><li class="hebact">Contact</li></a>
 					</ul>
 				</nav>	
-				<a href="#" class="inscription">S'inscrire</a>
 			</div>
 		</header>
 		<main>
+			<section id="hero">
+				<div class="hero-content">
+					<h1>Développeur Logiciel</h1>
+					<p>Création d'applications modernes et performantes</p>
+					<div class="hero-buttons">
+						<a href="#projets" class="btn primary-btn">Voir mes projets</a>
+						<a href="#contact" class="btn secondary-btn">Me contacter</a>
+					</div>
+				</div>
+			</section>
+
 			<div id="testaside">
-				<!--==============================================================PARTIE POPULAIRE================================-->
-				<aside>
-					<div>
-						<h2 id="populaire_titre">Les plus populaires <i class="fas fa-chart-line chart-line-black"></i></h2>
-					</div>
-					<div class="lespop">
-						<!-- Les cartes populaires seront générées par JavaScript -->
-					</div>
-				</aside>
-				<!--==============================================================================================================-->
-				<!--=================================================PARTIE HEBERGEMENT+++++++++++++==============================-->
-				<section id="hebergements">
-					<div id="titre_hebergement">
-						<h2 id="">Hébergements à Marseille</h2>
-					</div>
-					<div id="div_hebergement">
-						<!-- Les cartes d'hébergement seront générées par JavaScript -->
-					</div>
-					<div class="afficher_plus"><a href="#">Afficher plus</a></div>
-				</section>
+				<div class="content-container">
+					<!--==============================================================PARTIE COMPÉTENCES================================-->
+					<aside id="competences">
+						<div>
+							<h2 id="populaire_titre">Mes spécialités <i class="fas fa-code chart-line-black"></i></h2>
+						</div>
+						<div class="lespop">
+							<!-- Les cartes de compétences seront générées par JavaScript -->
+						</div>
+					</aside>
+					<!--==============================================================================================================-->
+					<!--=================================================PARTIE PROJETS RÉCENTS====================================-->
+					<section id="projets">
+						<div id="titre_hebergement">
+							<h2>Mes projets récents</h2>
+						</div>
+						<div id="div_hebergement">
+							<!-- Les cartes de projets seront générées par JavaScript -->
+						</div>
+						<div class="afficher_plus"><a href="#projets_vitrine">Voir tous les projets</a></div>
+					</section>
+				</div>
 			</div>
-			<section id="activites_bloc">
+			<section id="projets_vitrine">
 				<div id="annonce_acti">
-					<!-- Les cartes d'activités seront générées par JavaScript -->
+					<h2 id="titreGrille">Projets techniques</h2>
+					<!-- Les cartes de projets en vitrine seront générées par JavaScript -->
+				</div>
+			</section>
+
+			<section id="contact">
+				<h2>Me contacter</h2>
+				<div class="contact-container">
+					<div class="contact-info">
+						<div class="contact-item">
+							<i class="fas fa-envelope"></i>
+							<p>hdamitzian@gmail.com</p>
+						</div>
+						<div class="contact-item">
+							<i class="fas fa-phone"></i>
+							<p>+33 6 78 41 02 67</p>
+						</div>
+						<div class="contact-item">
+							<i class="fas fa-map-marker-alt"></i>
+							<p>Lyon, France</p>
+						</div>
+					</div>
+					<div class="social-links">
+						<a href="#" class="social-link"><i class="fab fa-github"></i></a>
+						<a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+						<a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+					</div>
 				</div>
 			</section>
 		</main>
 	</div>
 
-	<script src="js/data.js"></script>
-	<script src="js/cards.js"></script>
+	<script src="js/data.js" defer></script>
+	<script src="js/cards.js" defer></script>
+	<script src="js/scroller.js" defer></script>
  </body>		
 </html>
