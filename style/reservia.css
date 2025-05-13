@@ -8,7 +8,6 @@
     --text-color: #333;
     --grey-light: #f2f2f2;
     --grey-dark: #ddd;
-    --success-color: #27ae60;
 }
 
 html {
@@ -39,7 +38,7 @@ a:hover {
 }
 
 /* Layout */
-#bloc_page {
+.page-container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -51,7 +50,7 @@ header {
     border-bottom: 1px solid var(--grey-light);
 }
 
-.menu_haut {
+.header-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,7 +67,7 @@ nav {
     margin-left: auto;
 }
 
-#ancres {
+.nav-links {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -77,18 +76,18 @@ nav {
     padding: 0;
 }
 
-.ancre_li_a {
+.nav-link {
     display: block;
     padding: 0 1.5rem;
 }
 
-.hebact {
+.nav-item {
     padding: 1.5rem 0;
     transition: all 0.3s ease;
     position: relative;
 }
 
-.border_blue::after {
+.active::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -98,7 +97,7 @@ nav {
     background-color: var(--primary-color);
 }
 
-.hebact:hover::after {
+.nav-item:hover::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -149,50 +148,50 @@ nav {
     transition: all 0.3s ease;
 }
 
-.primary-btn {
+.btn-primary {
     background-color: var(--primary-color);
     color: white;
 }
 
-.primary-btn:hover {
+.btn-primary:hover {
     background-color: var(--primary-dark);
     color: white;
 }
 
-.secondary-btn {
-    background-color: var(--secondary-color);;
+.btn-secondary {
+    background-color: var(--secondary-color);
     color: white;
 }
 
-.secondary-btn:hover {
+.btn-secondary:hover {
     background-color: white;
     color: var(--secondary-color);
 }
 
-/* Portfolio Sections */
-#testaside {
-    display: block; /* Changé de flex à block pour éviter la liaison des hauteurs */
+/* Main content sections */
+.main-container {
+    display: block;
     margin-bottom: 3rem;
 }
 
 .content-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Remplace le flex layout tout en conservant les proportions */
+    grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    align-items: stretch; /* Étire les éléments pour qu'ils aient la même hauteur */
+    align-items: stretch;
 }
 
-aside, #projets {
+.skills-sidebar, .projects-section {
     background-color: var(--grey-light);
     border-radius: 1rem;
     padding: 2rem;
 }
 
-#projets {
+.projects-section {
     height: fit-content;
 }
 
-#populaire_titre, #titre_hebergement {
+.section-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -203,14 +202,14 @@ aside, #projets {
     color: var(--primary-color);
 }
 
-/* Cards */
-.lespop {
+/* Skills Cards */
+.skills-list {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.popular {
+.skill-card {
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
@@ -218,17 +217,17 @@ aside, #projets {
     transition: transform 0.3s ease;
 }
 
-.popular:hover {
+.skill-card:hover {
     transform: translateY(-5px);
 }
 
-.aside_prio {
+.skill-link {
     display: flex;
     padding: 0.7rem;
     height: 100%;
 }
 
-.conteneur_image_pop {
+.skill-image-container {
     width: 40%;
     min-height: 150px;
     overflow: hidden;
@@ -239,7 +238,7 @@ aside, #projets {
     justify-content: center;
 }
 
-.populaire {
+.skill-image {
     width: 100%;
     height: 100%;
     border-radius: 0.7rem;
@@ -248,25 +247,25 @@ aside, #projets {
     background-repeat: no-repeat;
 }
 
-.contenu_case_pop {
+.skill-content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 60%;
 }
 
-.ratings_pop {
+.skill-rating {
     color: var(--primary-color);
 }
 
 /* Project Cards */
-#div_hebergement {
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
 }
 
-.hebergementcarte {
+.project-card {
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
@@ -274,11 +273,11 @@ aside, #projets {
     transition: transform 0.3s ease;
 }
 
-.hebergementcarte:hover {
+.project-card:hover {
     transform: translateY(-5px);
 }
 
-.contneur_image_project {
+.project-image-container {
     width: 100%;
     height: 180px;
     overflow: hidden;
@@ -287,7 +286,7 @@ aside, #projets {
     justify-content: center;
 }
 
-.imgProject {
+.project-image {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -296,49 +295,49 @@ aside, #projets {
     border-radius: 1rem 1rem 0 0;
 }
 
-.hebergment_case_contenue {
+.project-content {
     padding: 1rem;
 }
 
-.titre_carte {
+.card-title {
     margin: 0 0 0.5rem 0;
     font-size: 1.1rem;
 }
 
-.commentaire_carte {
+.card-description {
     margin: 0 0 1rem 0;
     font-size: 0.9rem;
     color: #666;
 }
 
-.ratings {
-    color: var(--primary-color);
-    font-size: 0.8rem;
+.text-overflow {
+    overflow: hidden;
+    max-height: 85px;
 }
 
-.afficher_plus {
+.see-more {
     margin-top: 2rem;
     font-weight: 700;
 }
 
-.afficher_plus a {
+.see-more a {
     color: var(--primary-color);
 }
 
-.afficher_plus a:hover {
+.see-more a:hover {
     text-decoration: underline;
 }
 
 /* Showcase Projects (Carousel) */
-#projets_vitrine {
+.showcase-section {
     margin: 3rem 0;
 }
 
-#annonce_acti {
+.carousel-container {
     position: relative;
 }
 
-.cart_acti {
+.showcase-card {
     background-color: white;
     border-radius: 1rem;
     overflow: hidden;
@@ -350,11 +349,11 @@ aside, #projets {
     flex-shrink: 0;
 }
 
-.cart_acti:hover {
+.showcase-card:hover {
     transform: translateY(-5px);
 }
 
-.activites {
+.showcase-image {
     height: 200px;
     background-size: contain;
     background-position: center;
@@ -362,22 +361,24 @@ aside, #projets {
     border-radius: 1rem 1rem 0 0;
 }
 
-.contenue_activites {
+.showcase-content {
     padding: 1.2rem;
+    overflow: hidden;
+    max-height: 120px;
 }
 
-.acti_description {
+.showcase-title {
     margin: 0 0 0.7rem 0;
     font-size: 1.1rem;
 }
 
-.project-description {
+.showcase-description {
     margin: 0 0 0.5rem 0;
     font-size: 0.9rem;
     color: #666;
 }
 
-.project-technologies {
+.showcase-technologies {
     margin: 0;
     font-size: 0.85rem;
     color: var(--primary-color);
@@ -385,14 +386,14 @@ aside, #projets {
 }
 
 /* Contact Section */
-#contact {
+.contact-section {
     background-color: var(--accent-color);
     padding: 3rem 2rem;
     margin: 3rem -2rem 0 -2rem;
     text-align: center;
 }
 
-#contact h2 {
+.contact-section h2 {
     margin-bottom: 2rem;
 }
 
@@ -435,7 +436,6 @@ aside, #projets {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-top: 1.5rem;
 }
 
 .social-link {
@@ -463,57 +463,6 @@ aside, #projets {
     color: white;
 }
 
-/* Footer */
-footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 3rem 2rem 1rem;
-    margin: 0 -2rem;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
-.footer_colonne {
-    width: calc(33.333% - 2rem);
-    min-width: 250px;
-}
-
-.footer_colonne h3 {
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-}
-
-.footer_colonne ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer_colonne li {
-    margin-bottom: 0.8rem;
-}
-
-.footer_colonne a {
-    color: white;
-    opacity: 0.8;
-}
-
-.footer_colonne a:hover {
-    opacity: 1;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 /* Carousel Styles */
 .carousel {
     position: relative;
@@ -528,7 +477,7 @@ footer {
     transition: transform 0.5s ease;
 }
 
-/* Styles des modales pour les détails des projets */
+/* Modal Styles */
 .modal-container {
     position: fixed;
     top: 0;
@@ -597,7 +546,7 @@ footer {
     padding: 20px;
 }
 
-/* Styles spécifiques pour les détails des compétences */
+/* Modal Details Content */
 .skill-details, .project-details, .showcase-details {
     display: flex;
     flex-direction: column;
@@ -610,7 +559,7 @@ footer {
     }
 }
 
-.skill-image, .project-image, .showcase-image {
+.detail-image {
     flex: 1;
     min-height: 250px;
     background-size: contain;
@@ -619,45 +568,45 @@ footer {
     border-radius: 8px;
 }
 
-.skill-content, .project-content, .showcase-content {
+.detail-content {
     flex: 2;
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-.skill-technologies, .project-info, .showcase-technologies, .showcase-features {
+.detail-info-box {
     background-color: var(--accent-color);
     padding: 15px;
     border-radius: 8px;
 }
 
-.skill-technologies h4, .project-info h4, .showcase-technologies h4, .showcase-features h4 {
+.detail-info-box h4 {
     margin-top: 0;
     color: var(--secondary-color);
 }
 
-.skill-technologies ul, .project-info ul, .showcase-features ul {
+.detail-info-box ul {
     padding-left: 20px;
     margin-bottom: 0;
 }
 
-.skill-technologies li, .project-info li, .showcase-features li {
+.detail-info-box li {
     margin-bottom: 5px;
 }
 
-.project-actions, .showcase-actions {
+.detail-actions {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
-.skill-rating, .project-rating {
+.detail-rating {
     color: var(--primary-color);
     font-size: 1.2rem;
 }
 
-/* Animation pour les boutons dans les modales */
+/* Button animations */
 .modal-body .btn {
     transform: translateY(0);
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -667,45 +616,46 @@ footer {
     transform: translateY(-3px);
 }
 
-#competences {
+/* Skills sidebar scrolling */
+.skills-sidebar {
     position: relative;
-    height: auto; /* Sera définie par JavaScript */
-    overflow-y: auto; /* Ajoute un défilement vertical si le contenu dépasse */
+    height: auto;
+    overflow-y: auto;
     background-color: var(--grey-light);
     border-radius: 1rem;
     padding: 2rem;
-    scrollbar-width: thin; /* Pour Firefox */
-    scrollbar-color: var(--primary-color) var(--grey-light); /* Pour Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--grey-light);
 }
 
-/* Personnalisation de la barre de défilement pour Chrome, Edge et Safari */
-#competences::-webkit-scrollbar {
+/* Scrollbar styling */
+.skills-sidebar::-webkit-scrollbar {
     width: 8px;
 }
 
-#competences::-webkit-scrollbar-track {
+.skills-sidebar::-webkit-scrollbar-track {
     background: var(--grey-light);
     border-radius: 1rem;
 }
 
-#competences::-webkit-scrollbar-thumb {
+.skills-sidebar::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
     border-radius: 1rem;
     border: 2px solid var(--grey-light);
 }
 
-/* Masquer la barre de défilement lorsqu'elle n'est pas nécessaire */
-#competences::-webkit-scrollbar-thumb:vertical {
+.skills-sidebar::-webkit-scrollbar-thumb:vertical {
     min-height: 30px;
     visibility: hidden;
 }
 
-#competences:hover::-webkit-scrollbar-thumb:vertical {
+.skills-sidebar:hover::-webkit-scrollbar-thumb:vertical {
     visibility: visible;
 }
 
+/* Responsive adjustments */
 @media (max-width: 767px) {
-    .project-actions, .showcase-actions {
+    .detail-actions {
         flex-direction: column;
     }
     
@@ -714,28 +664,23 @@ footer {
     }
 }
 
-/* Responsive Design */
 @media screen and (max-width: 1024px) {
-    #testaside {
-        flex-direction: column;
+    .content-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
-    .conteneur_image_pop {
+    .skill-image-container {
         width: 30%;
     }
     
-    .contenu_case_pop {
+    .skill-content {
         width: 70%;
-    }
-
-    .content-container {
-        grid-template-columns: 1fr; /* Une colonne sur petits écrans */
-        gap: 2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .menu_haut {
+    .header-menu {
         justify-content: center;
     }
     
@@ -744,7 +689,7 @@ footer {
         width: 100%;
     }
     
-    #ancres {
+    .nav-links {
         justify-content: space-around;
         width: 100%;
     }
@@ -756,18 +701,14 @@ footer {
     .hero-content p {
         font-size: 1.2rem;
     }
-    
-    .footer_colonne {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 480px) {
-    #bloc_page {
+    .page-container {
         padding: 0 1rem;
     }
     
-    .ancre_li_a {
+    .nav-link {
         padding: 0 0.8rem;
     }
     
@@ -775,15 +716,15 @@ footer {
         font-size: 2rem;
     }
     
-    #div_hebergement {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
     
-    .conteneur_image_pop {
+    .skill-image-container {
         width: 40%;
     }
     
-    .contenu_case_pop {
+    .skill-content {
         width: 60%;
     }
 }

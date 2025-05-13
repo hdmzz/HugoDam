@@ -12,7 +12,7 @@ function generateStars(count) {
 
 // Fonction pour générer les cartes des compétences principales
 function generateMainSkillsCards() {
-    const containerElement = document.querySelector('.lespop');
+    const containerElement = document.querySelector('.skills-list');
     containerElement.innerHTML = '';
 
     mainSkills.forEach(skill => {
@@ -21,7 +21,7 @@ function generateMainSkillsCards() {
             
         // Générer les étoiles seulement si le champ stars existe
         const starsHTML = skill.stars ? `
-            <div class="ratings_pop">
+            <div class="skill-rating">
                 <span>
                     ${generateStars(skill.stars)}
                 </span>
@@ -29,16 +29,16 @@ function generateMainSkillsCards() {
         ` : '';
             
         const cardHTML = `
-            <article class="popular">        		
-                <a href="#${skill.id}" class="aside_prio" onclick="showSkillDetails('${skill.id}')">
-                    <div class="conteneur_image_pop">
-                        <div id="${skill.id}" class="populaire" style="background-image: url(${imagePath})">
+            <article class="skill-card">        		
+                <a href="#${skill.id}" class="skill-link" onclick="showSkillDetails('${skill.id}')">
+                    <div class="skill-image-container">
+                        <div id="${skill.id}" class="skill-image" style="background-image: url(${imagePath})">
                         </div>
                     </div>
-                    <div class="contenu_case_pop">
-                        <div class="overflow">
-                            <h3 class="titre_carte">${skill.name}</h3>
-                            <p class="commentaire_carte">${skill.description}</p>
+                    <div class="skill-content">
+                        <div class="text-overflow">
+                            <h3 class="card-title">${skill.name}</h3>
+                            <p class="card-description">${skill.description}</p>
                         </div>
                         ${starsHTML}
                     </div>
@@ -51,21 +51,21 @@ function generateMainSkillsCards() {
 
 // Fonction pour générer les cartes des projets récents
 function generateRecentProjectCards() {
-    const containerElement = document.getElementById('div_hebergement');
+    const containerElement = document.querySelector('.projects-grid');
     containerElement.innerHTML = '';
 
     recentProjects.forEach(project => {
         const cardHTML = `
-            <article class="hebergementcarte project-card">
-                <a href="#project-${project.id}" class="hebprio" onclick="showProjectDetails('${project.id}')">
-                    <div class="contneur_image_project">
-                        <div id="${project.id}" class="imgProject" style="background-image: url(images/4_small/${project.image})">
+            <article class="project-card">
+                <a href="#project-${project.id}" onclick="showProjectDetails('${project.id}')">
+                    <div class="project-image-container">
+                        <div id="${project.id}" class="project-image" style="background-image: url(images/4_small/${project.image})">
                         </div>
                     </div>
-                    <div class="hebergment_case_contenue">
-                        <div class="overflow">
-                            <h3 class="titre_carte">${project.name}</h3>
-                            <p class="commentaire_carte">${project.description}</p>
+                    <div class="project-content">
+                        <div class="text-overflow">
+                            <h3 class="card-title">${project.name}</h3>
+                            <p class="card-description">${project.description}</p>
                         </div>
                     </div>
                 </a>
@@ -77,10 +77,10 @@ function generateRecentProjectCards() {
 
 // Fonction pour générer les cartes du portfolio de projets
 function generateShowcaseProjectCards() {
-    const containerElement = document.getElementById('annonce_acti');
+    const containerElement = document.querySelector('.carousel-container');
     
     // Conserver le titre existant
-    const title = containerElement.querySelector('#titreGrille');
+    const title = containerElement.querySelector('.section-title');
     
     // Vider le contenu actuel sauf le titre
     containerElement.innerHTML = '';
@@ -89,14 +89,14 @@ function generateShowcaseProjectCards() {
     // Ajouter les projets showcase
     showcaseProjects.forEach(project => {
         const cardHTML = `
-            <article class="cart_acti" id="${project.gridId}">
+            <article class="showcase-card" id="${project.gridId}">
                 <a href="#showcase-${project.id}" onclick="showShowcaseDetails('${project.id}')"> 
-                    <div id="${project.id}" class="activites" style="background-image: url(images/4_small/${project.image})">
+                    <div id="${project.id}" class="showcase-image" style="background-image: url(images/4_small/${project.image})">
                     </div>
-                    <div class="contenue_activites">
-                        <h3 class="acti_description">${project.name}</h3>
-                        <p class="project-description">${project.description}</p>
-                        <p class="project-technologies"><i class="fas fa-code"></i> ${project.technologies}</p>
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">${project.name}</h3>
+                        <p class="showcase-description">${project.description}</p>
+                        <p class="showcase-technologies"><i class="fas fa-code"></i> ${project.technologies}</p>
                     </div>
                 </a>
             </article>
@@ -117,11 +117,11 @@ function showSkillDetails(skillId) {
             skill.name,
             `
             <div class="skill-details">
-                <div class="skill-image" style="background-image: url(images/4_small/${skill.image})"></div>
-                <div class="skill-content">
+                <div class="detail-image" style="background-image: url(images/4_small/${skill.image})"></div>
+                <div class="detail-content">
                     <p>${skill.description}</p>
-                    <div class="skill-rating">${generateStars(skill.stars)}</div>
-                    <div class="skill-technologies">
+                    <div class="detail-rating">${generateStars(skill.stars)}</div>
+                    <div class="detail-info-box">
                         <h4>Technologies maîtrisées</h4>
                         <ul>
                             <li>HTML5 / CSS3</li>
@@ -150,11 +150,11 @@ function showProjectDetails(projectId) {
             project.name,
             `
             <div class="project-details">
-                <div class="project-image" style="background-image: url(images/4_small/${project.image})"></div>
-                <div class="project-content">
+                <div class="detail-image" style="background-image: url(images/4_small/${project.image})"></div>
+                <div class="detail-content">
                     <p>${project.description}</p>
-                    <div class="project-rating">${generateStars(project.stars)}</div>
-                    <div class="project-info">
+                    <div class="detail-rating">${generateStars(project.stars)}</div>
+                    <div class="detail-info-box">
                         <h4>Caractéristiques du projet</h4>
                         <ul>
                             <li>Technologies : JavaScript, HTML, CSS</li>
@@ -163,9 +163,9 @@ function showProjectDetails(projectId) {
                             <li>Livraison : ${new Date().getFullYear()-1}</li>
                         </ul>
                     </div>
-                    <div class="project-actions">
-                        ${url && url !== "#" ? `<a href="${url}" class="btn primary-btn">Voir le site</a>` : ''}
-                        ${githubUrl && githubUrl !== "#" ? `<a href="${githubUrl}" class="btn secondary-btn">Voir le code</a>` : ''}
+                    <div class="detail-actions">
+                        ${url && url !== "#" ? `<a href="${url}" class="btn btn-primary">Voir le site</a>` : ''}
+                        ${githubUrl && githubUrl !== "#" ? `<a href="${githubUrl}" class="btn btn-secondary">Voir le code</a>` : ''}
                     </div>
                 </div>
             </div>
@@ -187,14 +187,14 @@ function showShowcaseDetails(projectId) {
             project.name,
             `
             <div class="showcase-details">
-                <div class="showcase-image" style="background-image: url(images/4_small/${project.image})"></div>
-                <div class="showcase-content">
+                <div class="detail-image" style="background-image: url(images/4_small/${project.image})"></div>
+                <div class="detail-content">
                     <p>${project.description}</p>
-                    <div class="showcase-technologies">
+                    <div class="detail-info-box">
                         <h4>Technologies utilisées</h4>
                         <p><i class="fas fa-code"></i> ${project.technologies}</p>
                     </div>
-                    <div class="showcase-features">
+                    <div class="detail-info-box">
                         <h4>Fonctionnalités principales</h4>
                         <ul>
                             <li>Authentification utilisateur</li>
@@ -203,9 +203,9 @@ function showShowcaseDetails(projectId) {
                             <li>Compatibilité cross-browser</li>
                         </ul>
                     </div>
-                    <div class="showcase-actions">
-                        ${url && url !== "#" ? `<a href="${url}" class="btn primary-btn">Démonstration</a>` : ''}
-                        ${githubUrl && githubUrl !== "#" ? `<a href="${githubUrl}" class="btn secondary-btn">GitHub</a>` : ''}
+                    <div class="detail-actions">
+                        ${url && url !== "#" ? `<a href="${url}" class="btn btn-primary">Démonstration</a>` : ''}
+                        ${githubUrl && githubUrl !== "#" ? `<a href="${githubUrl}" class="btn btn-secondary">GitHub</a>` : ''}
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ function initCarousel() {
     // Attendre que les cartes soient générées
     setTimeout(() => {
         // Récupérer le conteneur des activités
-        const container = document.getElementById('annonce_acti');
+        const container = document.querySelector('.carousel-container');
         if (!container) return;
         
         // Ajouter la classe pour le style du carrousel
@@ -22,8 +22,8 @@ function initCarousel() {
         slidesWrapper.className = 'carousel-slides';
         
         // Déplacer les cartes d'activités dans le wrapper
-        const cards = container.querySelectorAll('.cart_acti');
-        const title = container.querySelector('#titreGrille');
+        const cards = container.querySelectorAll('.showcase-card');
+        const title = container.querySelector('.section-title');
         
         // Garder le titre hors du wrapper
         container.innerHTML = '';
@@ -75,7 +75,7 @@ function startAutoScroll() {
         wrapper.style.transform = `translateX(-${scrollPosition}px)`;
         
         // Vérifier si on a défilé toutes les cartes originales
-        const originalCards = wrapper.querySelectorAll('.cart_acti:not(.clone)');
+        const originalCards = wrapper.querySelectorAll('.showcase-card:not(.clone)');
         if (originalCards.length === 0) return;
         
         // Calculer la largeur totale des cartes originales
@@ -95,6 +95,42 @@ function startAutoScroll() {
         }
     }, scrollDelay);
 }
+
+// Fonction pour synchroniser la hauteur de l'aside avec celle de la section projets
+function synchronizeHeight() {
+    const projectsSection = document.querySelector('.projects-section');
+    const skillsSidebar = document.querySelector('.skills-sidebar');
+    
+    if (projectsSection && skillsSidebar) {
+        // Obtenir la hauteur de la section projets
+        const projectsHeight = projectsSection.offsetHeight;
+        
+        // Appliquer cette hauteur à l'aside
+        skillsSidebar.style.height = projectsHeight + 'px';
+        
+        // Vérifier si le contenu de l'aside est plus grand que sa hauteur
+        const asideContent = skillsSidebar.querySelector('.skills-list');
+        const asideContentHeight = asideContent ? asideContent.offsetHeight + 80 : 0; // +80 pour le titre et les marges
+        
+        // Si le contenu dépasse, activer le défilement
+        if (asideContentHeight > projectsHeight) {
+            skillsSidebar.style.overflowY = 'auto';
+        } else {
+            skillsSidebar.style.overflowY = 'hidden';
+        }
+    }
+}
+
+// Exécuter la fonction lors du chargement du DOM
+document.addEventListener('DOMContentLoaded', function() {
+    synchronizeHeight();
+    
+    // Réappliquer lors du redimensionnement de la fenêtre
+    window.addEventListener('resize', synchronizeHeight);
+    
+    // Réappliquer après que le contenu est chargé (images, etc.)
+    window.addEventListener('load', synchronizeHeight);
+});
 
 // Initialiser le carrousel après le chargement du DOM
 document.addEventListener('DOMContentLoaded', () => {

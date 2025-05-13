@@ -9,18 +9,18 @@
 	<title>HugoDam</title>
 </head>
 <body>
-	<div id="bloc_page">
+	<div class="page-container">
 		<header>
-			<div class="menu_haut">
+			<div class="header-menu">
 				<div id="logo">
 					<h1 class="name-title">Hugo Damitzian</h1>
 				</div>
 				<nav>
-					<ul id="ancres">
-						<a href="#competences" class="ancre_li_a"><li class="hebact border_blue">Compétences</li></a>
-						<a href="#projets" class="ancre_li_a"><li class="hebact">Projets</li></a>
-						<a href="#projets_vitrine" class="ancre_li_a"><li class="hebact">Portfolio</li></a>
-						<a href="#contact" class="ancre_li_a"><li class="hebact">Contact</li></a>
+					<ul class="nav-links">
+						<a href="#competences" class="nav-link"><li class="nav-item active">Compétences</li></a>
+						<a href="#projets" class="nav-link"><li class="nav-item">Projets</li></a>
+						<a href="#projets_vitrine" class="nav-link"><li class="nav-item">Portfolio</li></a>
+						<a href="#contact" class="nav-link"><li class="nav-item">Contact</li></a>
 					</ul>
 				</nav>	
 			</div>
@@ -28,47 +28,47 @@
 		<main>
 			<section id="hero">
 				<div class="hero-content">
-					<h1>Développeur Logiciel</h1>
-					<p>Création d'applications modernes et performantes</p>
+					<h1>Développeur Web & Mobile</h1>
+					<p>Création d'applications web et mobiles modernes et performantes</p>
 					<div class="hero-buttons">
-						<a href="#projets" class="btn primary-btn">Voir mes projets</a>
-						<a href="#contact" class="btn secondary-btn">Me contacter</a>
+						<a href="#projets" class="btn btn-primary">Voir mes projets</a>
+						<a href="#contact" class="btn btn-secondary">Me contacter</a>
 					</div>
 				</div>
 			</section>
 
-			<div id="testaside">
+			<div class="main-container">
 				<div class="content-container">
 					<!--==============================================================PARTIE COMPÉTENCES================================-->
-					<aside id="competences">
-						<div>
-							<h2 id="populaire_titre">Mes spécialités <i class="fas fa-code chart-line-black"></i></h2>
+					<aside id="competences" class="skills-sidebar">
+						<div class="section-title">
+							<h2>Mes spécialités <i class="fas fa-code"></i></h2>
 						</div>
-						<div class="lespop">
+						<div class="skills-list">
 							<!-- Les cartes de compétences seront générées par JavaScript -->
 						</div>
 					</aside>
 					<!--==============================================================================================================-->
 					<!--=================================================PARTIE PROJETS RÉCENTS====================================-->
-					<section id="projets">
-						<div id="titre_hebergement">
+					<section id="projets" class="projects-section">
+						<div class="section-title">
 							<h2>Mes projets récents</h2>
 						</div>
-						<div id="div_hebergement">
+						<div class="projects-grid">
 							<!-- Les cartes de projets seront générées par JavaScript -->
 						</div>
-						<div class="afficher_plus"><a href="#projets_vitrine">Voir tous les projets</a></div>
+						<div class="see-more"><a href="#projets_vitrine">Voir tous les projets</a></div>
 					</section>
 				</div>
 			</div>
-			<section id="projets_vitrine">
-				<div id="annonce_acti">
-					<h2 id="titreGrille">Projets techniques</h2>
+			<section id="projets_vitrine" class="showcase-section">
+				<div class="carousel-container">
+					<h2 class="section-title">Portfolio de projets</h2>
 					<!-- Les cartes de projets en vitrine seront générées par JavaScript -->
 				</div>
 			</section>
 
-			<section id="contact">
+			<section id="contact" class="contact-section">
 				<h2>Me contacter</h2>
 				<div class="contact-container">
 					<div class="contact-info">
