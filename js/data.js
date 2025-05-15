@@ -67,7 +67,7 @@ const recentProjects = [
         name: "Visualisation 3D",
         description: "Interface de visualisation de données géographiques",
         image: "sunnyciign.png",
-        url: "https://hdmzz.github.io/SunnyCi/"
+        url: "https://hdmzz.github.io/DEMVis/"
     },
     {
         id: "toralizer",
