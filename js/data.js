@@ -60,13 +60,14 @@ const recentProjects = [
         name: "SunnyCi",
         description: "Localiser une terrasse au soleil !",
         image: "Sunnycimapbox.png",
-        url: "https://hugodam.cloud/SunnyCi/"
+        url: "https://hdmzz.github.io/sunnyCiMapbox/"
     },
     {
         id: "ign",
         name: "Visualisation 3D",
         description: "Interface de visualisation de données géographiques",
-        image: "sunnyciign.png"
+        image: "sunnyciign.png",
+        url: "https://hdmzz.github.io/SunnyCi/"
     },
     {
         id: "toralizer",
