@@ -153,16 +153,6 @@ function showProjectDetails(projectId) {
                 <div class="detail-image" style="background-image: url(images/4_small/${project.image})"></div>
                 <div class="detail-content">
                     <p>${project.description}</p>
-                    <div class="detail-rating">${generateStars(project.stars)}</div>
-                    <div class="detail-info-box">
-                        <h4>Caractéristiques du projet</h4>
-                        <ul>
-                            <li>Technologies : JavaScript, HTML, CSS</li>
-                            <li>Durée : 3 mois</li>
-                            <li>Rôle : Développeur principal</li>
-                            <li>Livraison : ${new Date().getFullYear()-1}</li>
-                        </ul>
-                    </div>
                     <div class="detail-actions">
                         ${url && url !== "#" ? `<a href="${url}" class="btn btn-primary">Voir le site</a>` : ''}
                         ${githubUrl && githubUrl !== "#" ? `<a href="${githubUrl}" class="btn btn-secondary">Voir le code</a>` : ''}

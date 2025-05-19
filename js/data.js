@@ -96,7 +96,14 @@ const recentProjects = [
         description: "Réseaux de neurones en C",
         image: "nn_sbg.jpeg"
         
-    }
+    },
+    {
+        id: "Self Driving Car",
+        name: "Self Driving Car",
+        description: "Réseau de neurones en typescript et visualistaion 3d sans librairies",
+        url: "https://hdmzz.github.io/selfDrivingCar/",
+        image: "nn_sbg.jpeg",
+    },
 ];
 
 // Données pour les projets en vitrine (pour le carrousel)
