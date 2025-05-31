@@ -104,6 +104,14 @@ const recentProjects = [
         url: "https://hdmzz.github.io/selfDrivingCar/",
         image: "nn_sbg.jpeg",
     },
+    {
+        id: "Xor",
+        name: "Xor Linked List",
+        description: "Implémentation d'un Xor linked list",
+        url: "https://github.com/hdmzz/xor_linked_list.git",
+        image: "XOR-Linked-List-Banner.png",
+        gitUrl: "https://github.com/hdmzz/xor_linked_list.git"
+    },
 ];
 
 // Données pour les projets en vitrine (pour le carrousel)
